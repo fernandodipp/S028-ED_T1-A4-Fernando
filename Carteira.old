@@ -1,0 +1,51 @@
+package tad_lists01;
+
+// import com.sun.javafx.image.impl.IntArgb;
+import net.datastructures.*;
+import CreditCards.*;
+
+/**
+ *
+ * @author brandg
+ */
+public class Carteira {
+    // private SinglyLinkedList wallet;
+    private DoublyLinkedList wallet;
+    
+    public Carteira() {
+        // wallet = new SinglyLinkedList();
+        wallet = new DoublyLinkedList();
+    }
+    
+    public void AdicionarCartao(String nome, String banco, String conta) {
+        wallet.addFirst(new CreditCardGratuito(nome, banco, conta));
+    }
+    
+    public CreditCardGratuito RemoverCartao() {
+        CreditCardGratuito conta = (CreditCardGratuito)wallet.removeFirst();
+        return conta;
+    }
+    
+    public CreditCardGratuito ObterCartao() {
+        if (!wallet.isEmpty()) {
+            return (CreditCardGratuito)wallet.first();
+        } 
+        return null;
+    }
+    
+    public void MostrarCarteira() {
+        System.out.println("\nSituação da carteira no momento:\n");
+        if (wallet.isEmpty()) {
+            System.out.println("Carteira está vazia");
+            return;
+        }
+
+        System.out.println(wallet);
+        // CreditCardGratuito contaAtual;
+        // while (!wallet.isEmpty()) {
+        //     contaAtual = (CreditCardGratuito)wallet.removeFirst();
+        //     System.out.println(contaAtual);
+        // } 
+    }
+    
+}

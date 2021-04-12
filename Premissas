@@ -1,0 +1,7 @@
+Reutilize a classe Carteira, mas agora contendo uma
+DoublyLinkedList chamada contas com objetos de uma
+nova classe chamada Cliente.
+
+A nova classe Cliente deve conter os campos de nome,
+cpf, rg e uma DoublyLinkedList chamada cartoes do tipo
+CreditCardGratuito.

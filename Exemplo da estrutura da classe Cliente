@@ -1,0 +1,53 @@
+package ativ04t1;
+
+// import com.sun.javafx.image.impl.IntArgb;
+import net.datastructures.*;
+import CreditCards.*;
+
+/**
+ *
+ * @author brandg
+ */
+public class Cliente {
+    String nome;
+    String rg;
+    String cpf;
+    private DoublyLinkedList<CreditCardGratuito> cartoes;
+
+    // Construtores para inicializar os atributos, seja preenchidos ou vazios
+    public Cliente(String str_nome, String doc_rg, String doc_cpf) {
+        //TODO: inicializar todos os atributos
+    }
+    public Cliente() {
+        //TODO: inicializar somente a lista e o resto fica vazio
+    }
+    
+    // Adicionar o nome, rg e cpf do cliente, sem cartoes
+    public void AdicionarCliente(String str_nome, String doc_rg, String doc_cpf) {
+        //TODO: atribuir valores aos atributos de nome, rg e cpf caso estejam vazios
+    }
+
+    public void AdicionarCartao(String banco, String conta) {
+        //TODO: adicionar um cartao a lista de cartoes
+    }
+    
+    public void RemoverCartao(String banco, String conta) {
+        //TODO: remover o primeiro ou ultimo cartao da lista de cartoes (a escola)
+    }
+    
+    public void MostrarCliente() {
+        //TODO: imprimir as informações do cliente
+    }
+
+    // Metodo toString esta pronto, retorna as informacoes do clinte em uma string.
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nome: " + nome + ", RG: " + rg +", CPF: " + cpf + "\n");
+        sb.append("Lista de cartoes:\n");
+        sb.append(cartoes);
+        sb.append("\n");
+        
+        return sb.toString();
+    }
+    
+}
