@@ -48,7 +48,7 @@ public class S028_aula01_creditcard_v02 {
     this(cust, bk, acnt, lim, 0.0, 10.0);               // use a balance of zero as default
   }
 
-  // Accessor methods:
+// Accessor methods:
   /** Returns the name of the customer. */
   public String getCustomer() { return customer; }
 
